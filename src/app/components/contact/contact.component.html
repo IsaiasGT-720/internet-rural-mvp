@@ -1,0 +1,47 @@
+<section id="contacto" class="section contact">
+  <div class="container">
+    <div class="contact-box">
+      <div class="contact-copy">
+        <p class="section-label">Contáctanos</p>
+        <h2>¿Listo para conectarte?</h2>
+        <p>
+          Escríbenos para conocer la disponibilidad del servicio y encontrar
+          el plan adecuado para tu zona.
+        </p>
+
+        <div class="numbers">
+          <div>
+            <span>Línea de atención</span>
+            <strong>+57 320 783 7849</strong>
+            <strong>+57 305 833 9331</strong>
+          </div>
+
+          <div>
+            <span>San José de la Montaña</span>
+            <strong>+57 324 453 0266</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-options">
+        @for (contact of contacts; track contact.title) {
+          <a
+            class="contact-option"
+            [class]="contact.className"
+            [href]="contact.href"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span class="contact-icon">
+              {{ contact.title.charAt(0) }}
+            </span>
+            <span>
+              <strong>{{ contact.title }}</strong>
+              <small>{{ contact.description }}</small>
+            </span>
+            <span class="arrow">→</span>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+</section>

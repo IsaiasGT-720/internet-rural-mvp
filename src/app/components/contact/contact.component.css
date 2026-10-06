@@ -1,0 +1,117 @@
+.contact {
+  background: var(--background);
+}
+
+.contact-box {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 60px;
+  padding: clamp(30px, 6vw, 70px);
+  border-radius: 34px;
+  background: var(--text);
+  color: var(--white);
+  box-shadow: 0 25px 60px rgba(23, 26, 58, 0.18);
+}
+
+.contact-copy .section-label {
+  color: var(--yellow);
+}
+
+.contact-copy h2 {
+  max-width: 550px;
+  margin: 0;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.contact-copy > p:not(.section-label) {
+  max-width: 530px;
+  margin: 20px 0 0;
+  color: #C9CADD;
+  line-height: 1.7;
+}
+
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 35px;
+}
+
+.numbers div {
+  display: grid;
+  gap: 5px;
+}
+
+.numbers span {
+  color: #AEB0C5;
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.numbers strong {
+  font-size: 0.96rem;
+}
+
+.contact-options {
+  display: grid;
+  gap: 12px;
+  align-content: center;
+}
+
+.contact-option {
+  display: grid;
+  grid-template-columns: 45px 1fr auto;
+  align-items: center;
+  gap: 13px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.07);
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.contact-option:hover {
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.contact-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--violet);
+  font-weight: 900;
+}
+
+.whatsapp .contact-icon { background: #35C56A; }
+.email .contact-icon { background: var(--pink); }
+.telegram .contact-icon { background: var(--blue); }
+
+.contact-option strong,
+.contact-option small {
+  display: block;
+}
+
+.contact-option small {
+  margin-top: 3px;
+  color: #B8B9CA;
+  font-size: 0.77rem;
+  line-height: 1.35;
+}
+
+.arrow {
+  color: #C7C8D7;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 850px) {
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+}

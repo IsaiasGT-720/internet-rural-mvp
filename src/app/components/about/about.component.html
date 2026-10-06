@@ -1,0 +1,52 @@
+<section id="nosotros" class="section about">
+  <div class="container">
+    <div class="about-intro">
+      <div>
+        <p class="section-label">Sobre nosotros</p>
+        <h2 class="section-title">Internet que llega donde lo necesitas.</h2>
+      </div>
+
+      <p class="section-description">
+        Nuestro objetivo es acercar la conectividad a hogares, negocios y
+        comunidades rurales mediante planes adaptados a las condiciones de
+        cada zona.
+      </p>
+    </div>
+
+    <div class="benefit-grid">
+      @for (benefit of benefits; track benefit.title) {
+        <article class="benefit-card">
+          <span class="benefit-number">{{ benefit.icon }}</span>
+          <h3>{{ benefit.title }}</h3>
+          <p>{{ benefit.description }}</p>
+        </article>
+      }
+    </div>
+
+    <div class="coverage">
+      <div class="coverage-copy">
+        <p class="section-label">Cobertura</p>
+        <h2>Conectividad pensada para nuestras zonas.</h2>
+        <p>
+          Consulta la disponibilidad de planes según el municipio y conoce
+          las alternativas de internet y televisión disponibles.
+        </p>
+        <a class="btn btn-primary" href="#planes">Consultar planes</a>
+      </div>
+
+      <div class="map-card" aria-label="Mapa ilustrativo de cobertura">
+        <div class="map-grid"></div>
+        <div class="map-road road-one"></div>
+        <div class="map-road road-two"></div>
+
+        <span class="map-pin pin-one">●</span>
+        <span class="map-pin pin-two">●</span>
+        <span class="map-pin pin-three">●</span>
+
+        <div class="map-label label-one">Santa Rosa</div>
+        <div class="map-label label-two">Cisneros</div>
+        <div class="map-label label-three">San José</div>
+      </div>
+    </div>
+  </div>
+</section>

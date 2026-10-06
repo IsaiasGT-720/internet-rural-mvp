@@ -1,0 +1,30 @@
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a class="brand" href="#inicio" (click)="closeMenu()">
+      <span class="brand-mark">CR</span>
+      <span>
+        <strong>Conecta</strong>
+        <small>Rural</small>
+      </span>
+    </a>
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="Abrir menú"
+      [attr.aria-expanded]="menuOpen()"
+      (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" [class.open]="menuOpen()" aria-label="Navegación principal">
+      <a href="#inicio" (click)="closeMenu()">Inicio</a>
+      <a href="#nosotros" (click)="closeMenu()">Nosotros</a>
+      <a href="#planes" (click)="closeMenu()">Planes</a>
+      <a href="#testimonios" (click)="closeMenu()">Testimonios</a>
+      <a class="nav-cta" href="#contacto" (click)="closeMenu()">Contáctanos</a>
+    </nav>
+  </div>
+</header>

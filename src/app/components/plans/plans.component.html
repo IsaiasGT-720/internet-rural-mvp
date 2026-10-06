@@ -1,0 +1,66 @@
+<section id="planes" class="section plans">
+  <div class="container">
+    <div class="plans-heading">
+      <div>
+        <p class="section-label">Planes por zona</p>
+        <h2 class="section-title">Elige tu plan.</h2>
+      </div>
+
+      <p class="section-description">
+        Los precios y servicios cambian según la zona. Encuentra la alternativa
+        disponible para tu municipio.
+      </p>
+    </div>
+
+    <div class="zone-grid">
+      @for (zone of zones; track zone.zone) {
+        <article class="zone-card" [style.--zone-color]="zone.color">
+          <div class="zone-header">
+            <span class="zone-badge">{{ zone.zone }}</span>
+            <h3>{{ zone.locations }}</h3>
+
+            @if (zone.affiliation) {
+              <p>Afiliación <strong>{{ zone.affiliation }}</strong></p>
+            }
+
+            @if (zone.installation) {
+              <p>Instalación <strong>{{ zone.installation }}</strong></p>
+            }
+          </div>
+
+          <div class="plan-list">
+            @for (plan of zone.plans; track plan.name + plan.price + plan.speed) {
+              <div class="plan-item">
+                @if (plan.speed) {
+                  <div class="speed">
+                    <strong>{{ plan.speed }}</strong>
+                    <span>{{ plan.name }}</span>
+                  </div>
+                } @else {
+                  <div class="service-name">{{ plan.name }}</div>
+                }
+
+                <div class="price">
+                  <strong>{{ plan.price }}</strong>
+                  <span>{{ plan.detail }}</span>
+                </div>
+              </div>
+            }
+          </div>
+
+          @if (zone.note) {
+            <p class="zone-note">{{ zone.note }}</p>
+          }
+        </article>
+      }
+    </div>
+
+    <div class="payment-note">
+      <span class="payment-icon">✓</span>
+      <p>
+        <strong>El pago es por adelantado:</strong>
+        afiliación más la primera mensualidad al momento de la instalación.
+      </p>
+    </div>
+  </div>
+</section>

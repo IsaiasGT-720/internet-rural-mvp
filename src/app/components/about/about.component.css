@@ -1,0 +1,171 @@
+.about {
+  background: var(--white);
+}
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 80px;
+  align-items: end;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 55px;
+}
+
+.benefit-card {
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--background);
+}
+
+.benefit-number {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  margin-bottom: 28px;
+  border-radius: 13px;
+  background: #EFE9FF;
+  color: var(--violet);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.benefit-card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.benefit-card p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.coverage {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 50px;
+  align-items: center;
+  margin-top: 75px;
+}
+
+.coverage-copy h2 {
+  max-width: 480px;
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.coverage-copy p:not(.section-label) {
+  max-width: 500px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.coverage-copy .btn {
+  margin-top: 14px;
+}
+
+.map-card {
+  position: relative;
+  min-height: 390px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #EDEAFF;
+}
+
+.map-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.65;
+  background-image:
+    linear-gradient(rgba(144, 104, 252, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(144, 104, 252, 0.10) 1px, transparent 1px);
+  background-size: 35px 35px;
+}
+
+.map-road {
+  position: absolute;
+  height: 8px;
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: 0 0 0 2px rgba(144, 104, 252, 0.08);
+}
+
+.road-one {
+  width: 120%;
+  top: 47%;
+  left: -10%;
+  transform: rotate(-14deg);
+}
+
+.road-two {
+  width: 95%;
+  top: 52%;
+  left: 5%;
+  transform: rotate(48deg);
+}
+
+.map-pin {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border: 5px solid var(--white);
+  border-radius: 50%;
+  color: transparent;
+  box-shadow: 0 8px 18px rgba(23, 26, 58, 0.16);
+}
+
+.pin-one {
+  top: 30%;
+  left: 28%;
+  background: var(--pink);
+}
+
+.pin-two {
+  top: 55%;
+  left: 53%;
+  background: var(--violet);
+}
+
+.pin-three {
+  top: 35%;
+  right: 19%;
+  background: var(--blue);
+}
+
+.map-label {
+  position: absolute;
+  padding: 7px 11px;
+  border-radius: 9px;
+  background: var(--white);
+  color: var(--text);
+  font-size: 0.73rem;
+  font-weight: 900;
+  box-shadow: 0 8px 18px rgba(23, 26, 58, 0.08);
+}
+
+.label-one { top: 23%; left: 20%; }
+.label-two { top: 62%; left: 47%; }
+.label-three { top: 27%; right: 10%; }
+
+@media (max-width: 850px) {
+  .about-intro,
+  .coverage {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .benefit-grid {
+    grid-template-columns: 1fr;
+  }
+}
