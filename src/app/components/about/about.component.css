@@ -1,5 +1,5 @@
 .about {
-  background: var(--white);
+  background: #f2eefd;
 }
 
 .about-intro {
@@ -81,6 +81,10 @@
   background: #EDEAFF;
 }
 
+
+
+/*
+
 .map-grid {
   position: absolute;
   inset: 0;
@@ -157,6 +161,8 @@
 .label-one { top: 23%; left: 20%; }
 .label-two { top: 62%; left: 47%; }
 .label-three { top: 27%; right: 10%; }
+
+*/
 
 @media (max-width: 850px) {
   .about-intro,

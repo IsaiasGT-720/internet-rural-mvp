@@ -1,4 +1,5 @@
 .hero {
+  background: linear-gradient(145deg, #E9E1FF 0%, #F9F5FF 48%, #f5d1f8 100%);
   position: relative;
   min-height: 680px;
   display: grid;
@@ -108,8 +109,16 @@
   border-radius: 42px;
   background: linear-gradient(145deg, #E9E1FF 0%, #F9F5FF 48%, #FFF4C9 100%);
   box-shadow: var(--shadow);
+  animation: image-animation 20s ease-in-out infinite alternate;
 }
 
+@keyframes image-animation {
+  0%{background-image: url(/internet-expand.webp);}
+  50%{background-image: url(/antena-campo.webp);}
+  100% {background-image: url(/internet-expand.webp);}
+}
+
+/*
 .visual-orbit {
   position: absolute;
   border: 2px solid rgba(144, 104, 252, 0.18);
@@ -280,7 +289,7 @@
 .signal-one { top: 120px; left: 29%; }
 .signal-two { top: 190px; left: 48%; color: var(--blue); }
 .signal-three { top: 105px; right: 25%; color: var(--violet); }
-
+*/
 @media (max-width: 900px) {
   .hero {
     padding-top: 55px;

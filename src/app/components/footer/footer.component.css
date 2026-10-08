@@ -16,8 +16,10 @@
   gap: 10px;
 }
 
-.footer .brand-mark {
-  background: linear-gradient(135deg, var(--yellow), var(--pink));
+
+.brand-mark {
+  height: 42px;
+  width: 42px;
 }
 
 .footer-brand strong,
